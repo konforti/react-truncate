@@ -85,7 +85,7 @@ class ReactTruncate extends React.Component<Props> {
 
         return (
             <span
-                className="trunc-wrapper"
+                className="truncate-wrapper"
                 {...(this.props.dataTest
                     ? { 'data-test': this.props.dataTest }
                     : {})}
