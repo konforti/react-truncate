@@ -1,0 +1,52 @@
+{
+    "name": "@konforti/react-truncate",
+    "version": "1.0.0",
+    "description": "Long text truncation",
+    "main": "dist/index.js",
+    "scripts": {
+        "clean": "rimraf dist",
+        "prepare": "yarn clean; rollup -c",
+        "flow": "flow",
+        "storybook": "start-storybook -p 9001 -c examples/.storybook"
+    },
+    "keywords": [
+        "long text",
+        "truncate",
+        "trim",
+        "react"
+    ],
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "tabWidth": 4
+    },
+    "devDependencies": {
+        "@storybook/cli": "^3.4.8",
+        "@storybook/node-logger": "^3.4.8",
+        "@storybook/react": "^3.4.8",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "flow-bin": "^0.61.0",
+        "prettier": "^1.9.2",
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "rimraf": "^2.6.2",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.7",
+        "rollup-plugin-flow": "^1.1.1",
+        "rollup-plugin-terser": "^1.0.1"
+    },
+    "author": "Raz Konforti <konforti@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/konforti/react-truncate/issues"
+    },
+    "homepage": "https://github.com/konforti/react-truncate#readme",
+    "dependencies": {
+        "@konforti/truncate": "^1.0.0"
+    }
+}
