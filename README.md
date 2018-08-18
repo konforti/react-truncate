@@ -23,26 +23,27 @@ import Truncate from '@konforti/react-truncate';
 ```
 
 ```js
-<Truncate truncFrom="middle" longText={text} />
+<Truncate truncFrom="middle">{text}</Truncate>
 ```
 
 ```js
-<Truncate lines={3} longText={text}
+<Truncate lines={3}>{text}</Truncate>
 ```
 
 ```js
-<Truncate ellipsis="->" longText={text} />
+<Truncate ellipsis=">>> " truncFrom="start">
+    {text}
+</Truncate>
 ```
 
 ```js
 <Truncate
-    longText={text}
-    onTruncate={
-        {text: string, truncated: boolean}) => {
-            if (truncated) {
-                // ... show tooltip with orig text ...
-            }
+    onTruncate={truncated => {
+        if (truncated) {
+            setState({ truncated: true });
         }
-    }
-/>
+    }}
+>
+    {text}
+</Truncate>
 ```

@@ -12,14 +12,13 @@ import type {
 } from './types.js';
 
 type Props = {
+    children: string,
     style?: Object,
-    longText: LongText,
     lines?: Lines,
     onTruncate?: Function,
     truncFrom?: TruncFrom,
     ellipsis?: Ellipsis,
     wrapperOffset?: WrapperOffset,
-    dataTest?: string,
 };
 class ReactTruncate extends React.Component<Props> {
     componentDidMount() {
@@ -30,7 +29,7 @@ class ReactTruncate extends React.Component<Props> {
     }
 
     componentDidUpdate(prevProps: Props) {
-        if (prevProps.longText !== this.props.longText) {
+        if (prevProps.children !== this.props.children) {
             this.handleLongText();
         }
     }
@@ -56,7 +55,7 @@ class ReactTruncate extends React.Component<Props> {
         if (this.longTextWrapper) {
             const res = truncate(
                 this.longTextWrapper,
-                this.props.longText,
+                this.props.children,
                 this.props.lines,
                 this.props.truncFrom,
                 this.props.ellipsis,
@@ -86,15 +85,12 @@ class ReactTruncate extends React.Component<Props> {
         return (
             <span
                 className="truncate-wrapper"
-                {...(this.props.dataTest
-                    ? { 'data-test': this.props.dataTest }
-                    : {})}
                 style={style}
                 ref={r => {
                     this.longTextWrapper = r;
                 }}
             >
-                {this.props.longText}
+                {this.props.children}
             </span>
         );
     }
