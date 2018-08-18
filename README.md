@@ -1,12 +1,14 @@
-# react-truncate
+# ✂️ React Truncate
 
-> Truncate text by number of lines.
+## ✨ Features
 
-> Truncate form end, start or middle.
+-   Truncate text by number of lines.
+-   Truncate form end, start or middle.
+-   Responsive truncation.
+-   Get notified if a text has been truncated or not.
+-   Custom ellipsis.
 
-> Custom ellipsis chars.
-
-## Installation
+## 🔧 Installation
 
 ```bash
 npm i -S @konforti/react-truncate
@@ -16,11 +18,13 @@ npm i -S @konforti/react-truncate
 yarn add @konforti/react-truncate
 ```
 
-## Usage
+## 🔧 Usage
 
 ```js
 import Truncate from '@konforti/react-truncate';
 ```
+
+## 🔦 Examples
 
 ```js
 <Truncate truncFrom="middle">{text}</Truncate>
