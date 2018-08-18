@@ -1,5 +1,7 @@
 # ✂️ React Truncate
 
+> React wrapper for [@konforti/truncate](https://github.com/konforti/truncate)
+
 ## ✨ Features
 
 -   Truncate text by number of lines.
